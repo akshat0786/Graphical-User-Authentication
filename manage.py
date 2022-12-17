@@ -3,7 +3,7 @@
 import os
 import sys
 
-
+#enviornment
 def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'graphical_pwd_auth.settings')
     try:
