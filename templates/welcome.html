@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home Page
+{% endblock %}
+
+
+{% block content %}
+
+<h1 style="text-align:center;font-size: 100px;">Welcome akshat{{ request.user.username }}</h1>
+<h2 style="text-align:center;font-size: 60px;">{{ request.user.username }}</h2>
+
+<br>
+<br>
+<br>
+<br>
+<div class="cyber">
+    <img src="static/images/cybersecurity.jpg" height="300" width="400" alt="">
+</div>
+
+
+<h1 style="text-align:center;">Auth status: {{request.user.is_authenticated}}</h1>
+
+<br>
+<br>  
+<p style="text-align:center;">
+    Depending on the Auth status, you will be seeing login/logout button at the top right.
+    <br>
+    <br>
+    <a href="{% url 'login' %}" style="text-align:justify;">Login</a>
+    : &nbspTo continue login
+    <br>
+    <a href="{% url 'logout' %}">Logout</a>
+    : To sign out of the application
+</p>
+{% endblock %}
